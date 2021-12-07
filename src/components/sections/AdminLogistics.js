@@ -23,7 +23,7 @@ export const AdminLogistics = () => {
                 </div>
             </div>
             <div className="travelnlog">
-                <img src={travelnlog} alt="travel and logistics" />
+                <img src={travelnlog} alt="travel and logistics" className="img" />
             </div>
         </div>
     )

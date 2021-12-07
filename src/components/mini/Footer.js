@@ -3,7 +3,7 @@ export const Footer = () => {
 
     return (
         <div className="y-padding footer">
-            <div className="flex AnL">
+            <div className="flex AnL x-spacing">
                 <div>
                     <h1>resource edge</h1>
                     <p>Throw the paperwork into the trash</p>

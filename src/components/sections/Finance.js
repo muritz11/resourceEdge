@@ -23,7 +23,7 @@ export const Finance = () => {
                 </div>
             </div>
             <div className="travelnlog">
-                <img src={hello} alt="travel and logistics" />
+                <img src={hello} alt="travel and logistics" className="img" />
             </div>
         </div>
     )

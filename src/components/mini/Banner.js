@@ -4,7 +4,7 @@ export const Banner = () => {
 
 
     return (
-        <div className="banner">
+        <div className="banner flex">
             <div className="banner-txt">
                 <h1>
                     Throw paperwork <br />
@@ -16,7 +16,7 @@ export const Banner = () => {
                 </p>
             </div>
             <div>
-                <img src={bannerImg} alt="relaxed" />
+                <img src={bannerImg} className="img" alt="relaxed" />
             </div>
         </div>
     )
