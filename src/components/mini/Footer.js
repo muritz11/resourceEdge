@@ -10,10 +10,10 @@ export const Footer = () => {
                 </div>
                 <div>
                     <div className="socials">
-                        <i class="ri-facebook-fill ri-lg"></i>
-                        <i class="ri-twitter-fill ri-lg"></i>
-                        <i class="ri-linkedin-fill ri-lg"></i>
-                        <i class="ri-instagram-fill ri-lg"></i>
+                        <i className="ri-facebook-fill ri-lg"></i>
+                        <i className="ri-twitter-fill ri-lg"></i>
+                        <i className="ri-linkedin-fill ri-lg"></i>
+                        <i className="ri-instagram-fill ri-lg"></i>
                     </div>
                     <p>Copyright &copy; Genesys DevStudio. All right reserved</p>
                 </div>

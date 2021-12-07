@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../imgs/Group.svg";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
 
     return (
         <nav className="nav">
@@ -21,11 +21,11 @@ export const Navbar = () => {
             </div>
             <div className="nav-right">
                 <div className="nav-lg">
-                    <Link to="/features" className="link s-in">Sign up</Link>
-                    <Link to="/about" className="link s-out">Sign in</Link>
+                    <Link to="/signup" className="link s-up">Sign up</Link>
+                    <Link to="/login" className="link s-in">Sign in</Link>
                 </div>
                 <div className="nav-responsive">
-                    <i className="ri-menu-line"></i>
+                    <i className="ri-menu-line" onClick={ props.openNav }></i>
                 </div>
             </div>
         </nav>
