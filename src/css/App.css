@@ -49,6 +49,10 @@ h1{
     width: 100%;
 }
 
+.m-auto{
+    margin: auto;
+}
+
 
 /**********************
 *nav
@@ -241,9 +245,80 @@ h1{
     margin-left: 15px;
 }
 
+/**********************
+*auth
+*********************/
+.auth{
+    padding: 50px;
+    text-align: center;
+}
+
+.auth .logo{
+    margin-left: 10px;
+}
+
+.auth-heading, .auth-txt{
+    margin: 20px;
+}
+
+.auth-txt{
+    margin-bottom: 40px;
+}
+
+.auth-card form{
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.auth-card input{
+    padding: 8px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #97A0AF;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.auth-card input:focus{
+    outline: 1px solid dodgerblue;
+}
+
+.auth-btn{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.auth-card hr{
+    margin-bottom: 20px;
+}
+
+.forgot{
+    text-align: center;
+}
+
+.auth-image-left{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.auth-image-right{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
 @media screen and (max-width: 480px) {
     .flex{
         display: block;
+    }
+
+    .flex-sm{
+        display: flex;
     }
 
     .p-img{
@@ -296,5 +371,9 @@ h1{
 
     .banner-txt h1{
         line-height: 40px;
+    }
+
+    .auth-image-left, .auth-image-right{
+        display: none;
     }
 }

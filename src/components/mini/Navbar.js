@@ -25,7 +25,7 @@ export const Navbar = (props) => {
                     <Link to="/login" className="link s-in">Sign in</Link>
                 </div>
                 <div className="nav-responsive">
-                    <i className="ri-menu-line" onClick={ props.openNav }></i>
+                    <i className="ri-menu-4-line ri-2x" onClick={ props.openNav }></i>
                 </div>
             </div>
         </nav>
