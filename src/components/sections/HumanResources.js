@@ -7,7 +7,7 @@ import { Card } from "../mini/Card";
 export const HumanResources = () => {
 
     return (
-        <section className="hr home-container">
+        <section className="hr">
             <div>
                 <h1>Human Resources</h1>
                 <p>Onboard new employees, manage the employee lifecycle <br /> and measure employee performance.</p>
@@ -30,7 +30,7 @@ export const HumanResources = () => {
               </Card>
             </div>
             <div className="employee-dir">
-                <img src={employee_dir} alt="" />
+                <img src={employee_dir} alt="employee directory" />
             </div>
         </section>
     )
