@@ -16,9 +16,7 @@ export const Auth = (props) => {
                 <Card>
                     <h2 className="auth-heading">{props.heading}</h2>
                     <p className="auth-txt">{props.paragraph}</p>
-                    <form>
-                        {props.children}
-                    </form>
+                    {props.children}
                 </Card>
             </section>
             <img src={leftImage} alt="" className="auth-image-left" />

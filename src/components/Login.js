@@ -14,7 +14,7 @@ export const Login = () => {
 
                 <hr />
 
-                <p className="forgot"><Link to="/" className="link logo">Forgot password?</Link></p>
+                <p className="forgot"><Link to="/reset" className="link logo">Forgot password?</Link></p>
 
             </form>
             </Auth>

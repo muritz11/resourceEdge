@@ -3,7 +3,8 @@ import './css/App.css';
 import 'remixicon/fonts/remixicon.css'
 import { LandingPage } from "./components/LandingPage";
 import { Login } from "./components/Login";
-import { SignUp } from "./components/ResetPassword";
+import { ResetPassword } from "./components/ResetPassword";
+import { ResetMain } from "./components/ResetMain";
 
 
 function App() {
@@ -14,12 +15,12 @@ function App() {
         <Switch>
           <Route exact path='/' component={LandingPage} />
           <Route path='/login' component={Login} />
-          <Route exact path='/signup' component={SignUp} />
+          <Route exact path='/reset' component={ResetPassword} />
+          <Route path='/reset-main' component={ResetMain} />
           {/* <Route path='/kitchen-profile/:kitId' component={KitchenProfile} /> */}
           <Route>404 Not Found</Route>
         </Switch>
       </Router>
-      {/* <Footer /> */}
     </div>
   );
 }
