@@ -53,6 +53,10 @@ h1{
     margin: auto;
 }
 
+.txt-right{
+    text-align: right;
+}
+
 
 /**********************
 *nav
@@ -309,6 +313,64 @@ h1{
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+
+/**********************
+*dashboard
+*********************/
+.dash-nav{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.avatar{
+    border-radius: 50%;
+}
+
+.dash-menu-btn{
+    margin-right: 15px;
+}
+
+.TM{
+    padding: 7px;
+    border-left: 1px solid #ccc;
+}
+
+.dash-content{
+    padding: 150px 100px;
+}
+
+.dash-content h1{
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.dash-content p{
+    color: rgb(48, 46, 46);
+    font-weight: bold;
+}
+
+.things-to-do{
+    margin-top: 60px;
+}
+
+.things-to-do h3{
+    margin-bottom: 15px;
+}
+
+.task{
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 50%;
+    margin-bottom: 5px;
+}
+
+.task p{
+    margin-left: 10px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {
