@@ -10,7 +10,7 @@ export const DashNavBar = () => {
                 <div className="w-50">
                         <div className="flex-sm">
                             <img src={menu} alt="" className="dash-menu-btn" />
-                            <h2><Link to="/" className="logo link">resource edge</Link></h2>
+                            <Link to="/" className="logo link bf-tm"><h3>resource edge</h3></Link>
                             <p className="TM">TM Dashboard</p>
                         </div>
                 </div>

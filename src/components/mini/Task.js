@@ -5,9 +5,11 @@ export const Task = (props) => {
 
     return (
         <div className="flex-sm task">
-            <img src={emptyCircle} alt="" />
-            <p>{props.task}</p>
-            <Link to="/" className="link txt-right">{props.to}</Link>
+            <div><img src={emptyCircle} alt="" /></div>
+            <div><p className="task-p"><small>{props.task}</small></p></div>
+            <div className="txt-right">
+                <Link to="/" className="link logo   ">{props.to}</Link>
+            </div>
         </div>
     )
 }

@@ -1,3 +1,14 @@
+:root{
+--logo-blue: #0052CC;
+--light-purp: #344563;
+--dark-purp: #091E42;
+
+--poppins: poppins, 'microsoft sans serif regular', 'sans-serif';
+--brush: "Brush script mt", cursive;
+}
+  
+
+
 *{
     padding: 0;
     margin: 0;
@@ -9,11 +20,11 @@
 *********************/
 body, .link{
     font-family: sans-serif;
-    color: #344563;
+    color: var(--light-purp);
 }
 
 h1{
-    color: #091E42;
+    color: var(--dark-purp);
 }
 
 .link{
@@ -22,7 +33,7 @@ h1{
 }
 
 .link:hover{
-    color: #0052CC;
+    color: var(--logo-blue);
 }
 
 .x-spacing{
@@ -57,6 +68,25 @@ h1{
     text-align: right;
 }
 
+.whyte{
+    color: white;
+}
+
+.pad-top-15{
+    padding-top: 15px;
+}
+
+.pencil{
+    color: #aaa;
+    padding: 15px;
+}
+
+.err{
+    color: red;
+}
+
+
+
 
 /**********************
 *nav
@@ -85,12 +115,14 @@ h1{
 
 .logo{
     color: #0052CC;
-    padding: 15px;
-    padding-left: 0;
+}
+
+.logo-pad{
+    padding: 0 15px 15px 0;
 }
 
 .s-in{
-    background-color: #0052CC;
+    background-color: var(--logo-blue);
     color: white;
     border-radius: 5px;
 }
@@ -100,7 +132,6 @@ h1{
 }
 
 .nav-dropdown{
-    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
@@ -125,10 +156,6 @@ h1{
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
-}
-
-.whyte{
-    color: white;
 }
 
 
@@ -224,7 +251,7 @@ h1{
 *footer
 *********************/
 .footer{
-    background: #091E42;
+    background: var(--dark-purp);
     color: white;
 }
 
@@ -275,8 +302,7 @@ h1{
     margin-bottom: 20px;
 }
 
-.auth-card input{
-    padding: 8px;
+.auth-input{
     width: 100%;
     border-radius: 6px;
     border: 1px solid #97A0AF;
@@ -284,8 +310,24 @@ h1{
     margin-bottom: 40px;
 }
 
-.auth-card input:focus{
+.auth-input input{
+    padding: 8px;
+    width: 90%;
+    border: none;
+    margin: 3px;
+}
+
+.auth-input .checked{
+    padding-left: 5px;
+    color: green;
+}
+
+.auth-input input:focus > .auth-input{
     outline: 1px solid dodgerblue;
+}
+
+.auth-input input:focus{
+    outline: none;
 }
 
 .auth-btn{
@@ -315,12 +357,24 @@ h1{
     right: 0;
 }
 
+.auth-user-detail{
+    margin: 20px;
+    margin-bottom: 60px;
+    margin-left: 60px;
+    word-wrap: normal;
+    justify-content: center;
+    align-items: center;
+}
 
 /**********************
 *dashboard
 *********************/
 .dash-nav{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dash-nav .w-50{
+    padding: 15px;
 }
 
 .avatar{
@@ -332,8 +386,13 @@ h1{
 }
 
 .TM{
-    padding: 7px;
+    margin: 10px;
+    margin-left: 5px;
+    padding-left: 15px;
     border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .dash-content{
@@ -359,18 +418,31 @@ h1{
 }
 
 .task{
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ccc;
-    width: 50%;
-    margin-bottom: 5px;
+    width: 70%;
+    margin-bottom: 7px;
 }
 
-.task p{
-    margin-left: 10px;
-    margin-right: 40px;
+.task div:nth-child(1){
+    width: 10%;
+}
+.task div:nth-child(2){
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.task div:nth-child(3){
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.task-p{
+    margin-left: 10px;
+    margin-right: 40px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -455,5 +527,9 @@ h1{
 
     .auth header .logo{
         font-size: 1.5rem;
+    }
+
+    .auth-user-detail{
+        font-size: .8em;
     }
 }

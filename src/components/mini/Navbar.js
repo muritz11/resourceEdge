@@ -7,10 +7,10 @@ export const Navbar = (props) => {
         <nav className="nav">
             <div className="nav-left">
                 <div className="nav-lg flex">
-                    <h2><Link to="/" className="link logo">resource edge</Link></h2>
+                    <h2><Link to="/" className="link logo logo-pad">resource edge</Link></h2>
 
-                    <Link to="/features" className="link nav-link">Features</Link>
-                    <Link to="/about" className="link nav-link">About</Link>
+                    <Link to="/features" className="link nav-link pad-top-15">Features</Link>
+                    <Link to="/about" className="link nav-link pad-top-15">About</Link>
                 </div>
                 <div className="nav-responsive">
                     <Link to="/">
