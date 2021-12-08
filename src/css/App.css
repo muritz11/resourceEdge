@@ -311,6 +311,15 @@ h1{
     right: 0;
 }
 
+@media screen and (max-width: 1000px) {
+    .auth-image-right, .auth-image-left{
+        display: none;
+    }
+
+    .w-50{
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 480px) {
     .flex{
@@ -375,5 +384,14 @@ h1{
 
     .auth-image-left, .auth-image-right{
         display: none;
+    }
+
+    .auth{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .auth header .logo{
+        font-size: 1.5rem;
     }
 }
