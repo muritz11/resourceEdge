@@ -1,5 +1,4 @@
 
-
 export const PasswordInput = (props) => {
     return (
         <>
@@ -32,8 +31,8 @@ export const PasswordInput = (props) => {
             </div> : ""
             }
 
-            <button type="submit" 
-            className={ props.password ? "s-in auth-btn" : "auth-btn" }>Log in</button>
+            <button
+            className="s-in auth-btn" onClick={props.login}>Log in</button>
         </>
     )
 }

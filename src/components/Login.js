@@ -1,9 +1,12 @@
 import { Auth } from "./mini/Auth"
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { EmailInput } from "./mini/EmailInput"
 import { PasswordInput } from "./mini/PasswordInput"
+import { useDispatch } from "react-redux"
+import { setLoggedIn } from "../redux/actions/LoggedInAction"
+import { loggedUser } from "../redux/actions/userActions"
 
 export const Login = () => {
 
@@ -12,8 +15,12 @@ export const Login = () => {
     const [password, setPassword] = useState('')
     const [errMsg, setErrMsg] = useState('')
     const [renderPwd, setRenderPwd] = useState(false)
+    const [redir, setRedir] = useState(false)
+    const dispatch = useDispatch()
 
     const users = useSelector((state) => state.allUsers.users)
+    
+
 
     useEffect(() => {
         const emailEx = users.filter((value) => {
@@ -62,36 +69,47 @@ export const Login = () => {
         }
     }
     
+    let handlePasswordSubmit = (e) => {
+        e.preventDefault();
+        dispatch(setLoggedIn(true))
+        dispatch(loggedUser(emailExist))
+        setRedir(true)
+    }
+    
 
+    if (redir) {
+        return <Redirect to="/dashboard" />
+    } else {
+        return (
+            <>
+                <Auth heading="Log in" paragraph="Access your resource edge account" >
+                <form>
+                    { !renderPwd ?
+                    <EmailInput 
+                    email={email}
+                    handleChange={handleInput}
+                    emailEx={emailExist.length}
+                    err={errMsg}
+                    saveEmail={handleEmailSubmit} /> : ""
+                    }
+                    
+                    { renderPwd ?
+                    <PasswordInput 
+                    password={password}
+                    handleChange={handleInput}
+                    err={errMsg}
+                    user={emailExist[0]}
+                    login={handlePasswordSubmit} /> : ""
+                    }
 
-    return (
-        <>
-            <Auth heading="Log in" paragraph="Access your resource edge account" >
-            <form>
-                { !renderPwd ?
-                <EmailInput 
-                email={email}
-                handleChange={handleInput}
-                emailEx={emailExist.length}
-                err={errMsg}
-                saveEmail={handleEmailSubmit} /> : ""
-                }
-                
-                { renderPwd ?
-                <PasswordInput 
-                password={password}
-                handleChange={handleInput}
-                err={errMsg}
-                user={emailExist[0]} /> : ""
-                }
+                    <hr />
 
-                <hr />
+                    <p className="forgot"><Link to="/reset" className="link logo">Forgot password?</Link></p>
 
-                <p className="forgot"><Link to="/reset" className="link logo">Forgot password?</Link></p>
-
-            </form>
-            </Auth>
-        </>
-    )
+                </form>
+                </Auth>
+            </>
+        )
+    }
 
 }

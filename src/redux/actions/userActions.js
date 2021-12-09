@@ -1,5 +1,3 @@
-
-
 export const setUser = (user) => {
     return {
         type: "USER",
@@ -7,9 +5,9 @@ export const setUser = (user) => {
     }
 }
 
-export const selectedUser = (userId) => {
+export const loggedUser = (user) => {
     return {
-        type: "SELECTED_USER",
-        payload: userId
+        type: "LOGGED_USER",
+        payload: user
     }
 }

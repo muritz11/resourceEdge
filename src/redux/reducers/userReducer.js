@@ -1,4 +1,3 @@
-// import { dishActionTypes } from "../constants/dish-action-types";
 
 const initialState = {
     users: [
@@ -10,22 +9,16 @@ const initialState = {
     ]
 }
 
-export const userReducer = (state = initialState, {type, payload}) => {
-    switch (type) {
-        // case userActionTypes.SET_USER:
-        //     return {...state, dishes: payload};
-    
-        default:
-            return state;
-    }
+export const userReducer = (state = initialState, {type}) => {
+    return state
 }
 
-// export const selectedUserReducer = (state={}, {type, payload}) => {
-//     switch (type) {
-//         case userActionTypes.SELECTED_USER:
-//             return {...state, payload}
+export const loggedUserReducer = (state={}, {type, payload}) => {
+    switch (type) {
+        case "LOGGED_USER":
+            return payload
     
-//         default:
-//             return state
-//     }
-// }
+        default:
+            return state
+    }
+}
