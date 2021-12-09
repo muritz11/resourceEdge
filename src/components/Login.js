@@ -30,8 +30,6 @@ export const Login = () => {
         setEmailExist(emailEx)
     }, [users, email])
 
-    // console.log(emailExist)
-
     function errFunc(msg) {
         setErrMsg(msg);
         setTimeout(() => {
@@ -65,7 +63,7 @@ export const Login = () => {
                 errFunc('Email does not exist');
             }
         } else {
-            errFunc('Email is empty');
+            errFunc('Enter email address');
         }
     }
     
@@ -90,18 +88,15 @@ export const Login = () => {
                     handleChange={handleInput}
                     emailEx={emailExist.length}
                     err={errMsg}
-                    saveEmail={handleEmailSubmit} /> : ""
-                    }
-                    
-                    { renderPwd ?
+                    saveEmail={handleEmailSubmit} /> : 
                     <PasswordInput 
                     password={password}
                     handleChange={handleInput}
                     err={errMsg}
                     user={emailExist[0]}
-                    login={handlePasswordSubmit} /> : ""
+                    login={handlePasswordSubmit} /> 
                     }
-
+                    
                     <hr />
 
                     <p className="forgot"><Link to="/reset" className="link logo">Forgot password?</Link></p>

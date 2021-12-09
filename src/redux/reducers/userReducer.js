@@ -9,8 +9,14 @@ const initialState = {
     ]
 }
 
-export const userReducer = (state = initialState, {type}) => {
-    return state
+export const userReducer = (state = initialState, {type, payload}) => {
+    switch (type) {
+        case "SET_PWD":
+            return state.users[0].password = payload;
+    
+        default:
+            return state;
+    }
 }
 
 export const loggedUserReducer = (state={}, {type, payload}) => {
