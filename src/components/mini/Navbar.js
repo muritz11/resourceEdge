@@ -1,7 +1,21 @@
 import { Link } from "react-router-dom";
 import logo from "../../imgs/Group.svg";
+import { useSelector, useDispatch } from "react-redux"
+import { setLoggedIn } from "../../redux/actions/LoggedInAction"
+import { loggedUser } from "../../redux/actions/userActions"
 
 export const Navbar = (props) => {
+
+    const isLoggedIn = useSelector((state) => state.isLoggedIn)
+
+    const dispatch = useDispatch()
+
+    const logOut = (e) => {
+        e.preventDefault()
+        dispatch(setLoggedIn(false))
+        dispatch(loggedUser({}))
+    }
+
 
     return (
         <nav className="nav">
@@ -22,7 +36,11 @@ export const Navbar = (props) => {
             <div className="nav-right">
                 <div className="nav-lg">
                     <Link to="/signup" className="link s-up">Sign up</Link>
-                    <Link to="/login" className="link s-in">Sign in</Link>
+                    { isLoggedIn ?
+                        <Link className="link s-in whyte-hover" onClick={logOut}>Log Out</Link> :
+                        <Link className="link s-in whyte-hover" to="/login">Log In</Link>
+                    
+                    }
                 </div>
                 <div className="nav-responsive">
                     <i className="ri-menu-4-line ri-2x" onClick={ props.openNav }></i>

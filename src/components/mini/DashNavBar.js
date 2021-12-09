@@ -1,8 +1,16 @@
 import avatar from "../../imgs/image 1.svg";
 import menu from "../../imgs/menu.svg";
 import { Link } from "react-router-dom";
+import { DashDropdown } from "./DashDropdown";
+import { useState } from "react";
 
 export const DashNavBar = () => {
+
+    const [renderDrp, setRenderDrp] = useState(false)
+
+    const toggleDropdwn = () => {
+        setRenderDrp(!renderDrp)
+    }
 
     return (
         <nav className="dash-nav">
@@ -14,10 +22,12 @@ export const DashNavBar = () => {
                             <p className="TM">TM Dashboard</p>
                         </div>
                 </div>
-                <div className="w-50 txt-right">
-                        <img src={avatar} alt="avatar" className="avatar" />
+                <div className="w-50 txt-right dash-avatar">
+                        <img src={avatar} alt="avatar" className="avatar" onClick={toggleDropdwn} />
                 </div>
             </div> 
+            { renderDrp ? <DashDropdown name="Muritz" /> : '' }
+            
         </nav>
     )
 }
