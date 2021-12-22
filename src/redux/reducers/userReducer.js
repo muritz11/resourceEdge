@@ -5,6 +5,11 @@ const initialState = {
             name: "Ositadinma Nwangwu",
             email: "o.nwangwu@genesystechhub.com",
             password: ""
+        },
+        {
+            name: "A. Maurice",
+            email: "test@test.com",
+            password: ""
         }
     ]
 }

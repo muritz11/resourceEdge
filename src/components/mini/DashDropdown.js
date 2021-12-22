@@ -41,13 +41,12 @@ export const DashDropdown = (props) => {
                 <div className="role flex-sm mb-sibling">
                     <img src={employee} alt="" />
                     <p>Employee</p>
-                    <i className="ri-check-fill ri-lg"></i>
+                    <i className="ri-check-fill ri-lg blue-tick"></i>
                 </div> : 
                 <div className="role flex-sm mb-sibling">
-                <img src={manager} alt="" />
-                <p>Talent Manager</p>
-
-                <i className="ri-check-fill ri-lg"></i>
+                    <img src={manager} alt="" />
+                    <p>Talent Manager</p>
+                    <i className="ri-check-fill ri-lg blue-tick"></i>
                 </div>
                 }
                 {/* not ticked */}

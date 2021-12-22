@@ -13,13 +13,13 @@ export const Finance = () => {
                 </div>
                 <div className="w-25">
                     <img src={list} alt="" />
-                    <h3>Travel & Logistics</h3>
-                    <p>Make travel requests, get approvals, and have access to travel information.</p>
+                    <h3>RE Vouchers</h3>
+                    <p>Track and manage expenditure for multiple teams across your organisation using Resource Edge Vouchers.</p>
                 </div>
                 <div className="w-25">
                     <img src={email} alt="" />
-                    <h3>Asset Management</h3>
-                    <p>Manage the acquisition, assignment, and disposition of assets seamlessly.</p>
+                    <h3>Payroll</h3>
+                    <p>Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes.</p>
                 </div>
             </div>
             <div className="travelnlog">

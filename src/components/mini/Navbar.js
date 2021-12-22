@@ -23,8 +23,8 @@ export const Navbar = (props) => {
                 <div className="nav-lg flex">
                     <h2><Link to="/" className="link logo logo-pad">resource edge</Link></h2>
 
-                    <Link to="/features" className="link nav-link pad-top-15">Features</Link>
-                    <Link to="/about" className="link nav-link pad-top-15">About</Link>
+                    <Link to="/" className="link nav-link pad-top-15">Features</Link>
+                    <Link to="/" className="link nav-link pad-top-15">About</Link>
                 </div>
                 <div className="nav-responsive">
                     <Link to="/">
@@ -35,7 +35,7 @@ export const Navbar = (props) => {
             </div>
             <div className="nav-right">
                 <div className="nav-lg">
-                    <Link to="/signup" className="link s-up">Sign up</Link>
+                    <Link to="/" className="link s-up">Sign up</Link>
                     { isLoggedIn ?
                         <Link className="link s-in whyte-hover" onClick={logOut}>Log Out</Link> :
                         <Link className="link s-in whyte-hover" to="/login">Log In</Link>

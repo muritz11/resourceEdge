@@ -28,8 +28,8 @@ export const NavDropdown = (props) => {
                             <i className="ri-close-line ri-2x" onClick={props.closeNav}></i>
                         </div>
                     </div>
-                    <h3><Link to="/features" className="link">Features</Link></h3>
-                    <h3><Link to="/about" className="link">About</Link></h3>
+                    <h3><Link to="/" className="link">Features</Link></h3>
+                    <h3><Link to="/" className="link">About</Link></h3>
                     <p className="s-in s-in-sm">
                         { isLoggedIn ?
                             <Link className="link whyte" onClick={logOut}>Log Out</Link> :
@@ -37,7 +37,7 @@ export const NavDropdown = (props) => {
                         
                         }
                     </p>
-                    <p className="s-in-sm"><Link className="link s-up" to="/signup">Sign Up</Link></p>
+                    <p className="s-in-sm"><Link className="link s-up" to="/">Sign Up</Link></p>
                 </div>
             )}
         </>

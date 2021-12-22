@@ -13,7 +13,7 @@ export const Dashboard = () => {
                 <DashNavBar />
                 <section className="dash-content">
                     <h1>Hello, {user.name}</h1>
-                    <p>Welcome and go to have you back</p>
+                    <p>Welcome and good to have you back</p>
                     <div className="things-to-do">
                         <h3>Things to do</h3>
                         <Task 

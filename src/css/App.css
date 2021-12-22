@@ -13,6 +13,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: .6s ease;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /**********************
@@ -89,6 +94,9 @@ h1{
     color: red;
 }
 
+.blue-tick{
+    color: var(--logo-blue);
+}
 
 
 
@@ -524,14 +532,15 @@ h1{
         width: 10%;
     }
 
-    .dash-nav-dropdown{
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 480px) {
     .flex{
         display: block;
+    }
+    
+    .dash-nav-dropdown{
+        width: 100%;
     }
 
     .flex-sm{
@@ -611,8 +620,16 @@ h1{
         padding: 60px 20px;
     }
 
+    .dash-content h1{
+        font-size: 1.5em;
+    }
+
     .task{
         width: 100%;
+    }
+
+    .task p {
+        margin-right: 0px;
     }
 
     .TM{
@@ -625,5 +642,26 @@ h1{
 
     .dash-nav-dropdown{
         width: 100%;
+    }
+
+    .dash-menu-btn{
+        margin-right: 0;
+    }
+
+    .w-sm-70{
+        width: 70%;
+    }
+
+    .w-sm-30{
+        width: 30%;
+    }
+
+    .card{
+        margin: 20px 0 20px 0;
+    }
+
+    .px-sm-0{
+        padding-right: 0;
+        padding-left: 0;
     }
 }

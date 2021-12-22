@@ -1,5 +1,16 @@
+import { useState } from "react"
 
 export const PasswordInput = (props) => {
+
+    const [showPwd, setShowPwd] = useState(false)
+
+    const inputType = showPwd ? "text" : "password"
+    const icon = showPwd ? "ri-eye-off-line ri-lg" : "ri-eye-line ri-lg"
+
+    const handleShowPwd = () => {
+        setShowPwd(!showPwd)
+    }
+
     return (
         <>
             <div className="auth-user-detail flex-sm">
@@ -16,12 +27,12 @@ export const PasswordInput = (props) => {
             <div className="auth-input">
                 <div className="flex flex-sm">
                     <input 
-                    type="password" 
+                    type={inputType} 
                     placeholder="Enter password" 
                     id="password" 
                     value={props.password} 
                     onChange={props.handleChange} />
-                    <i className="ri-eye-line ri-xl"></i>
+                    <i className={icon} onClick={handleShowPwd}></i>
                 </div>
             </div>
             { props.err ? 
