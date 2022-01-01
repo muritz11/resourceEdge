@@ -20,6 +20,17 @@ html{
     scroll-behavior: smooth;
 }
 
+
+@keyframes drop {
+    from {
+      transform: translateY(-50px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+  
+
 /**********************
 *generic
 *********************/
@@ -150,6 +161,8 @@ h1{
     background-color: white;
     width: 100%;
     padding: 20px;
+    animation-name: drop;
+    animation-duration: .5s;
 }
 
 .nav-header{

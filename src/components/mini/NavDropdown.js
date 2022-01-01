@@ -19,7 +19,7 @@ export const NavDropdown = (props) => {
     return (
         <>
             {props.nav && (
-                <div className="nav-dropdown">
+                <nav className="nav-dropdown">
                     <div className="nav-header flex-sm">
                         <div className="nav-left">
                             <img src={logo} alt="logo" />
@@ -38,7 +38,7 @@ export const NavDropdown = (props) => {
                         }
                     </p>
                     <p className="s-in-sm"><Link className="link s-up" to="/">Sign Up</Link></p>
-                </div>
+                </nav>
             )}
         </>
     )
