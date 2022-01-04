@@ -8,6 +8,17 @@ export const DashNavBar = () => {
 
     const [renderDrp, setRenderDrp] = useState(false)
 
+    window.onclick = function(event) {
+
+        const modal = document.querySelector("#modal")
+
+        if (event.target === modal) {
+            console.log("hmm")
+            setRenderDrp(!renderDrp)
+        }
+    }
+
+
     const toggleDropdwn = () => {
         setRenderDrp(!renderDrp)
     }
@@ -27,7 +38,6 @@ export const DashNavBar = () => {
                 </div>
             </div> 
             { renderDrp ? <DashDropdown name="Muritz" /> : '' }
-            
         </nav>
     )
 }

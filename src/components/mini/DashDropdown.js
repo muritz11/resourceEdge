@@ -29,43 +29,45 @@ export const DashDropdown = (props) => {
 
 
     return (
-        <div className="dash-nav-dropdown">
-            <div className="header mb-parent pad">
-                <h4 className="grey mb-sibling">{props.name}</h4>
-                <p className="mb-sibling">Profile</p>
-            </div>
-            <div className="nav-content mb-parent pad">
-                <h5 className="grey mb-sibling">Use resource edge as</h5>
-                {/* ticked */}
-                { role === "employee" ?
-                <div className="role flex-sm mb-sibling">
-                    <img src={employee} alt="" />
-                    <p>Employee</p>
-                    <i className="ri-check-fill ri-lg blue-tick"></i>
-                </div> : 
-                <div className="role flex-sm mb-sibling">
+        <div id="modal">
+            <div className="dash-nav-dropdown">
+                <div className="header mb-parent pad">
+                    <h4 className="grey mb-sibling">{props.name}</h4>
+                    <p className="mb-sibling">Profile</p>
+                </div>
+                <div className="nav-content mb-parent pad">
+                    <h5 className="grey mb-sibling">Use resource edge as</h5>
+                    {/* ticked */}
+                    { role === "employee" ?
+                    <div className="role flex-sm mb-sibling">
+                        <img src={employee} alt="" />
+                        <p>Employee</p>
+                        <i className="ri-check-fill ri-lg blue-tick"></i>
+                    </div> : 
+                    <div className="role flex-sm mb-sibling">
+                        <img src={manager} alt="" />
+                        <p>Talent Manager</p>
+                        <i className="ri-check-fill ri-lg blue-tick"></i>
+                    </div>
+                    }
+                    {/* not ticked */}
+                    { role !== "employee" ?
+                    <div className="role flex-sm mb-sibling" onClick={selEmployee}>
+                        <img src={employee} alt="" />
+                        <p>Employee</p>
+                    </div> : 
+                    <div className="role flex-sm mb-sibling" onClick={selTm}>
                     <img src={manager} alt="" />
                     <p>Talent Manager</p>
-                    <i className="ri-check-fill ri-lg blue-tick"></i>
+                    </div>
+                    }
                 </div>
-                }
-                {/* not ticked */}
-                { role !== "employee" ?
-                <div className="role flex-sm mb-sibling" onClick={selEmployee}>
-                    <img src={employee} alt="" />
-                    <p>Employee</p>
-                </div> : 
-                <div className="role flex-sm mb-sibling" onClick={selTm}>
-                <img src={manager} alt="" />
-                <p>Talent Manager</p>
+                <hr />
+                <div className="pad">
+                    <Link to="" onClick={logOut} className="link">Log Out</Link>
                 </div>
-                }
+                
             </div>
-            <hr />
-            <div className="pad">
-                <Link onClick={logOut} className="link">Log Out</Link>
-            </div>
-            
         </div>
     )
 }
